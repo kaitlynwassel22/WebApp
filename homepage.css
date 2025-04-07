@@ -1,0 +1,67 @@
+.loginandlogo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+.loginbutton{
+    flex: 1;
+    width: 50%;
+}
+.toppic{
+    height: 200px;
+    display: block;
+    object-fit: contain;
+    width: 50%;
+}
+#loginForm input, button{
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 250px;
+}
+/*Style the navigation bar give it a background color of navy*/
+nav{
+    background-color: #031e8a;
+}
+/* center the header unordered list*/
+header nav ul{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation list */
+header nav ul li{
+    list-style: none;
+    margin: 0 15px;
+}
+/* Navigation links layout*/
+header nav ul li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 10px 15px;
+}
+/* Hover coloring*/
+header nav ul li a:hover{
+    background-color: white;
+    color: #031e8a;
+}
+body{
+    font-family: Arial, sans-serif;
+}
+body h1{
+    text-align: center;
+    text-decoration: solid;
+}
+/* Style the today's truck section */
+.todaystrucks{
+    border: 1px solid;
+    padding: 20px;
+    margin: 10px auto;
+    background-color: #031e8a;
+}
