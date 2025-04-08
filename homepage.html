@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foggy Bottom Food Trucks</title>
+    <!--link the homepage styling and main styling-->
     <link href="homepage.css" rel="stylesheet">
     <link href="mainstyle.css" rel="stylesheet">
     <script src="homepage.js"></script>
 </head>
 <body>
     <header>
-        <h1>Foggy Bottom Food Trucks</h1>
+        <!--Add in top food truck logo-->
+        <img src="foodtrucklogo.png" id="logoimg" alt=""/>
         <!--add in navigation bar to go to different pages-->
         <nav>
             <ul>
@@ -21,30 +23,72 @@
             </ul>
         </nav>
     </header>
-    
-    <!--Add in login button in top right corner-->
-    <div class="loginandlogo">
-        <div class="loginbutton">
-        <p>Login or create an account for exclusive offers for GWU Students and Staff<br>
-        </p>
-        <form id="loginForm">
-            <input type="email" placeholder="Enter your GWU email" required>
-            <button type="submit">Login</button>
-        </form>
-    </div>
-    <img src="foodtrucklogo.png" class="toppic">
-    </div>
-    <div class="todaystrucks">
-        <h3>Today's Trucks:</h2>
-            <h4><strong>Tasty Kabob</strong></h4>
-            <p><i>Fresh Halal Food</i></p>
-            <p><strong>Location: </strong>Outside of Duques Hall</p>
-            <p><strong>Hours: </strong>Monday-Friday 11am-8pm</p>
-            <h4>Falafel + Kabob</h4>
-            <p><i>The Original Falafel and Shawarma Truck!</i></p>
-            <p><strong>Location:</strong> Outside of Duques Hall</p>
-            <p><strong>Hours: </strong> Monday-Friday 11am-8pm</p>
-    </div>
+    <!--create two sections-->
+    <article>
+        <section>
+            <!--Add in login button in top right corner-->
+            <div class="loginauthentication">
+                <form id="loginForm" onsubmit="Login(event)">
+                <p>Login or create an account for exclusive offers for GWU Students and Staff<br>
+                </p>
+                    <!--the inputs for login are email and password-->
+                    <input type="email" id="loginEmail" name="loginEmail" placeholder="Enter your GWU email" pattern=".+@gwu\.edu" required>
+                    <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter password" required>
+                    <button type="submit">Login</button>
+                    <p class="errormessage" id="errorlogin"></p>
+                    <!--if user doesn't have an account they can create an account-->
+                    <p>Don't have an account?<a href="#" id="createaccount" onclick="opencreateaccount()">Create an account</a></p>
+                </form>
+            </div>
+            <!--This is to create a student account popup for special deals-->
+            <div id="createaccounthyperlink" class="modal">
+                <!--use modal for a pop up window to create their account-->
+                <div class="modal-content">
+                    <span class="close" onclick="closecreateaccount"></span>
+                    <h2>Create Account</h2>
+                    <form id="makeaccount">
+                        <input type="email" id="loginEmail" name="loginEmail" placeholder="Enter your GWU email" pattern=".+@gwu\.edu" required>
+                        <input type="password" id="loginPassword" name="loginPassword" placeholder="Create a password" required>
+                        <button type="submit">Create Account</button>
+                        <p>Already have an account? <a href="#" onclick="closecreateaccount()">Login</a></p>
+                    </form>
+                </div>
+            </div>
+            <!--Once logged in show pop up that says login successful, if not then show an error pop up-->
+            <div id="successlogin" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closesuccess()">X</span>
+                    <p>Login Successful, Welcome!</p>
+                </div>
+            </div>
+            <div id="errorlogin" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeerror()">X</span>
+                    <p>Invalid email, Please use your GWU email</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="todaystrucks">
+                <h3>Today's Trucks:</h3>
+                    <!--split in two for the two food trucks-->
+                    <article>
+                    <section>
+                        <h4><strong>Tasty Kabob</strong></h4>
+                        <p><i>Fresh Halal Food</i></p>
+                        <p><strong>Location: </strong>Outside of Duques Hall</p>
+                        <p><strong>Hours: </strong>Monday-Friday 11am-8pm</p>
+                    </section>
+                    <section>
+                        <h4>Falafel + Kabob</h4>
+                        <p><i>The Original Falafel and Shawarma Truck!</i></p>
+                        <p><strong>Location:</strong> Outside of Duques Hall</p>
+                        <p><strong>Hours: </strong> Monday-Friday 11am-8pm</p>
+                    </section>
+                </article>
+            </div>
+        </section>
+    </article>
     
 </body>
 <footer>
