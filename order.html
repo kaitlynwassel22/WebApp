@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FBT - Order</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Foggy Bottom Food Trucks</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="order.html" class="active">Order</a>
+      <a href="reviews.html">Reviews</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Order Your Food</h2>
+    <form id="orderForm">
+      <label for="name">Name*:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">Phone*:</label>
+      <input type="tel" id="phone" name="phone" required placeholder="(123) 456-7890">
+
+      <p>Order Type:</p>
+      <label><input type="radio" name="orderType" value="delivery" checked> Delivery</label>
+      <label><input type="radio" name="orderType" value="pickup"> Pickup</label>
+
+      <div id="deliveryOptions">
+        <label for="address">Street Address:</label>
+        <textarea id="address" name="address"></textarea>
+
+        <label for="deliveryTime">Delivery Time:</label>
+        <input type="time" id="deliveryTime" name="deliveryTime">
+      </div>
+
+      <div id="pickupOptions" style="display:none;">
+        <label for="pickupTime">Pickup Time:</label>
+        <input type="time" id="pickupTime" name="pickupTime">
+      </div>
+
+      <button type="submit">Begin Building Your Order</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Foggy Bottom Food Trucks | GWU Project</p>
+  </footer>
+
+  <script src="order.js"></script>
+</body>
+</html>
