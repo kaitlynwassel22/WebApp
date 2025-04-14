@@ -1,15 +1,10 @@
-header img#logoimg {
-    display: block;
-    width: 100%; /* This makes the image stretch across the full width of the header */
-    max-height: 500px;
-    margin: 0 auto;
- }
- article {
+ /* style the two sections so the background color is white */
+article {
     background: white;
     display: flex;
     flex-flow: row wrap;
- }
- article section, article nav.vertical {
+}
+article section, article nav.vertical {
     flex: 1 1 300px;
  }
 .loginandlogo{
@@ -39,7 +34,7 @@ header img#logoimg {
     padding-top: 60px;
   }
   
-  .modal-content {
+.modal-content {
     background-color: white;
     margin: auto;
     padding: 20px;

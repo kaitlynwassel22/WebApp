@@ -1,7 +1,7 @@
 // pop up modal for creating an account
 function opencreateaccount() {
     document.getElementById("createaccounthyperlink").style.display="block";
-  }
+}
 // closes once the form is submitted
 function closecreateaccount() {
     document.getElementById("createaccounthyperlink").style.display="none";
@@ -12,10 +12,12 @@ function Login(event) {
   
     const emailInput = document.querySelector('#loginEmail');
     const email = emailInput.value.trim();
-  
+    // make sure email ends with @gwu.edu, if it does then login is successful and shows pop up
     if (email.endsWith("@gwu.edu")) {
       document.getElementById("successlogin").style.display="block";
-    } else {
+    } 
+      // if wrong email then unsucessful
+    else {
       document.getElementById("errorlogin").style.display="block";
     }
   }
