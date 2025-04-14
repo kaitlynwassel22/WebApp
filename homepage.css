@@ -1,0 +1,92 @@
+header img#logoimg {
+    display: block;
+    width: 100%; /* This makes the image stretch across the full width of the header */
+    max-height: 500px;
+    margin: 0 auto;
+ }
+ article {
+    background: white;
+    display: flex;
+    flex-flow: row wrap;
+ }
+ article section, article nav.vertical {
+    flex: 1 1 300px;
+ }
+.loginandlogo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+.loginbutton{
+    flex: 1;
+    width: 50%;
+}
+#loginForm input, button{
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 250px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+  }
+  
+  .modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+body{
+    font-family: Arial, sans-serif;
+}
+body h1{
+    text-align: center;
+    text-decoration: solid;
+}
+/* Style the today's truck section */
+.todaystrucks{
+    border: 1px solid;
+    padding: 20px;
+    margin: 10px auto;
+    background-color: white;
+    color: #00274c;
+}
+.todaystrucks h3{
+    color: #00274c;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+/* login validation with colors 
+if not a gwu email then will go to invalid controls*/
+#loginEmail:focus:valid, #loginPassword:focus:valid{
+    background-color: rgb(220,255,220);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+ }
+ #loginEmail:focus:invalid, #loginPassword:focus:invalid{
+    background-color: rgb(255,230,230);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+ }
