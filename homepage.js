@@ -1,3 +1,8 @@
+/*
+  Author: Kaitlyn Wassel, Vanessa Onwughalu, Mark Coleman
+  Date: April 2025
+  Foggy Bottom Food Trucks - JavaScript for Homepage
+*/
 // pop up modal for creating an account
 function opencreateaccount() {
     document.getElementById("createaccounthyperlink").style.display="block";

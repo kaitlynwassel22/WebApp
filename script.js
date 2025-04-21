@@ -1,5 +1,9 @@
 // script.js
-
+/*
+  Author: Kaitlyn Wassel, Vanessa Onwughalu, Mark Coleman
+  Date: April 2025
+  Foggy Bottom Food Trucks - JavaScript for Reviews Page
+*/
 document.getElementById("reviewForm").addEventListener("submit", function (e) {
     e.preventDefault();
   

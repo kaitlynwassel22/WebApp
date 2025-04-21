@@ -1,3 +1,8 @@
+/*
+  Author: Kaitlyn Wassel, Vanessa Onwughalu, Mark Coleman
+  Date: April 2025
+  Foggy Bottom Food Trucks - JavaScript for Order Page
+*/
 // Toggle visibility based on selected order type
 document.querySelectorAll('input[name="orderType"]').forEach(option => {
     option.addEventListener('change', () => {

@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<!--
+  Author: Kaitlyn Wassel, Vanessa Onwughalu, Mark Coleman
+  Date: April 2025
+  Foggy Bottom Food Trucks - Home Page
+--><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foggy Bottom Food Trucks</title>
@@ -8,6 +12,7 @@
     <link href="homepage.css" rel="stylesheet">
     <link href="mainstyle.css" rel="stylesheet">
     <script src="homepage.js"></script>
+    <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
 </head>
 <body>
     <header>
@@ -34,7 +39,8 @@
                     <!--the inputs for login are email and password-->
                     <input type="email" id="loginEmail" name="loginEmail" placeholder="Enter your GWU email" pattern=".+@gwu\.edu" required>
                     <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter password" required>
-                    <button type="submit">Login</button>
+                    <button id="loginButton" type="submit">Login</button>
+                    <p id="loginMessage" style="display:none;">Login for more deals!</p>
                     <p class="errormessage" id="errorlogin"></p>
                     <!--if user doesn't have an account they can create an account-->
                     <p>Don't have an account?<a href="#" id="createaccount" onclick="opencreateaccount()">Create an account</a></p>
@@ -89,7 +95,21 @@
             </div>
         </section>
     </article>
-    
+    <!--Add in a jQuery element based on in class example
+    when the mouse hovers over the login submit button the login message will appear through the .show feature
+    then add in the .hide feature so the message goes away once the mouse isnt hovering anymore-->
+    <script>
+         $(document).ready(function() {
+            $("#loginButton").hover(
+            function() {
+                $("#loginMessage").show();
+            },
+            function() {
+                $("#loginMessage").hide();
+            }
+            );
+        });
+      </script>
 </body>
 <!--Add in footer-->
 <footer>
